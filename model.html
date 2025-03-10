@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Performance Comparison</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
+</head>
+<body>
+
+    <header>
+        <h1>Model Performance Comparison</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Stock Agent</a></li>
+                <li><a href="report.html">Report</a></li>
+                <li><a href="model.html">Model</a></li> <!-- 确保 "Model" 选项在所有页面都有 -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="controls">
+            <label for="modelSelect">Select Model: </label>
+            <select id="modelSelect">
+                <option value="Time Series Transformer">Time Series Transformer (TST)</option>
+                <option value="Temporal Convolutional Network (TCN)">Temporal Convolutional Network (TCN)</option>
+                <option value="Temporal Fusion Transformer">Temporal Fusion Transformer (TFT)</option>
+                <option value="Long Short-Term Memory (LSTM)">Long Short-Term Memory (LSTM)</option>
+            </select>
+        </section>
+
+        <section class="chart-container">
+            <canvas id="performanceChart" width="600" height="300"></canvas>
+            <div id="metricsBelow" class="metrics-below">
+                <p>RMSE: —</p>
+                <p>CRPS: —</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by AI Research</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- 引入 JavaScript -->
+</body>
+</html>

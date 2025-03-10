@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Forecasting Report</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Stock Analysis & Forecasting Report</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Stock Agent</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                Stock price forecasting is a challenging task in financial markets, where volatility and randomness introduce high uncertainty. 
+                This study compares models such as LSTM, Time Series Transformer (TST), Temporal Convolutional Network (TCN), and Lag-Llama foundational model
+                in predicting Nvidia (NVDA) stock prices. Additionally, the Stock Investment Analysis Agent in our first tab is designed to provide deeper insight for users.
+            </p>
+        </section>
+
+        <section>
+            <h2>Methods</h2>
+            <p>
+                The dataset consists of historical daily stock prices for NVIDIA (NVDA), focusing on the closing price. Models are trained with 
+                a prediction horizon of seven days. The dataset is preprocessed using MinMax normalization.<br>
+                I did EDA first to compare the pattern of Nvidia Stock data and AMD Stock data, and then uses RMSE for deterministic forecasts, CRPS for probabilistic forecasts as metrics.
+            </p>
+        </section>
+        <section>
+            <h2>Explanation of Stock Analysis Agent</h2>
+            <p>
+                I built an AI agent using Dify to analyze U.S. stock market trends, using real-time data from Yahoo Finance and OpenAI's 4o large language models.<br>
+                With my personalized design of prompt and workflow, this agent could provide insights into stock performance and recommendations. 
+            </p>
+        </section>
+        <section>
+            <h2>Results and Conclusion</h2>
+            <p>
+                The results of Model Comparison indicate that among the tested models, the LSTM model performs the worst, with RMSE = 16.2018, while the Time Series Transformer performs the best with RMSE = 5.4467.<br>
+                Future work can explore hybrid approaches combining LLM-based forecasting with traditional deep learning models.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by AI Research</p>
+    </footer>
+
+</body>
+</html>
